@@ -1,8 +1,14 @@
 import streamlit as st
 import pandas as pd
-from groq import Groq
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 def main():
+    # 例: pandasパッケージをインストール
+    install("groq")
+    from groq import Groq
+
     st.title("AIとのチャットボット")
     
     # ローカルのExcelファイルパスを指定

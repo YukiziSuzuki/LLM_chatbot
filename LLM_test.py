@@ -1,13 +1,8 @@
 import streamlit as st
 import pandas as pd
-
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+from groq import Groq
 
 def main():
-    # 例: pandasパッケージをインストール
-    install("groq")
-    from groq import Groq
 
     st.title("AIとのチャットボット")
     
